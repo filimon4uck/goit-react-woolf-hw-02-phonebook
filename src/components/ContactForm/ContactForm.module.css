@@ -1,0 +1,14 @@
+.form {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+}
+.bth {
+  max-width: 100px;
+}
