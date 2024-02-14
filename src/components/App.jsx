@@ -10,13 +10,15 @@ class App extends Component {
     contacts: [],
     filter: '',
   };
+
   handleAddContact = data => {
     const nameInLowerCase = data.name.toLowerCase();
     const exist = this.state.contacts.some(
       ({ name }) => name.toLowerCase().trim() === nameInLowerCase.trim()
     );
     if (exist) {
-      throw new Error(`${data.name} is already in contacts`);
+      alert(`${data.name} is already in contacts`);
+      return;
     }
     this.setState(prev => ({
       contacts: [{ ...data, id: nanoid() }, ...prev.contacts],
